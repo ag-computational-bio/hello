@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-echo true
-
 Channel.from('Bonjour', 'Ciao', 'Hello', 'Hola')
   .set{ch_greetings}
 
 process sayHello {
+
+    echo true
 
   input: 
     val x from ch_greetings
